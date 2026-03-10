@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Risper! 🦋</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #FFB6C1, #FFC0CB, #FFD700, #FF69B4);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-container {
+            background: linear-gradient(145deg, #FFF0F5, #FFE4E1);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(255, 105, 180, 0.3);
+            max-width: 600px;
+            width: 90%;
+            position: relative;
+            z-index: 10;
+            border: 3px solid #FFB6C1;
+        }
+
+        .card-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .birthday-title {
+            font-size: 3em;
+            background: linear-gradient(45deg, #FF69B4, #FFB6C1, #FFD700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.3);
+            animation: sparkle 2s ease-in-out infinite;
+        }
+
+        .friend-name {
+            font-size: 2.5em;
+            color: #FF1493;
+            margin: 20px 0;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(255, 105, 180, 0.5);
+        }
+
+        .card-content {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .birthday-message {
+            font-size: 1.2em;
+            color: #C71585;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        .flower-decoration {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .flower {
+            font-size: 2em;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .flower:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .flower:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        .butterfly {
+            position: absolute;
+            font-size: 1.5em;
+            animation: fly 8s linear infinite;
+        }
+
+        .butterfly:nth-child(1) {
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .butterfly:nth-child(2) {
+            top: 20%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .butterfly:nth-child(3) {
+            bottom: 20%;
+            left: 15%;
+            animation-delay: 4s;
+        }
+
+        .star {
+            position: absolute;
+            color: #FFD700;
+            animation: twinkle 1.5s ease-in-out infinite;
+        }
+
+        .star:nth-child(1) { top: 5%; left: 20%; animation-delay: 0s; }
+        .star:nth-child(2) { top: 15%; right: 25%; animation-delay: 0.3s; }
+        .star:nth-child(3) { top: 80%; left: 30%; animation-delay: 0.6s; }
+        .star:nth-child(4) { top: 70%; right: 15%; animation-delay: 0.9s; }
+        .star:nth-child(5) { top: 40%; left: 5%; animation-delay: 1.2s; }
+        .star:nth-child(6) { top: 50%; right: 8%; animation-delay: 1.5s; }
+
+        .wishes-list {
+            text-align: left;
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(255, 182, 193, 0.2);
+            border-radius: 15px;
+            border: 2px solid #FFB6C1;
+        }
+
+        .wish-item {
+            color: #C71585;
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+
+        .wish-item::before {
+            content: "🌸 ";
+            margin-right: 10px;
+        }
+
+        .footer-message {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1.3em;
+            color: #FF1493;
+            font-weight: bold;
+        }
+
+        .sparkle-button {
+            background: linear-gradient(45deg, #FF69B4, #FFB6C1);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 20px auto;
+            display: block;
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+        }
+
+        .sparkle-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.5);
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes fly {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(100px, -50px) rotate(10deg); }
+            50% { transform: translate(200px, 0px) rotate(-10deg); }
+            75% { transform: translate(100px, 50px) rotate(5deg); }
+            100% { transform: translate(0, 0) rotate(0deg); }
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.3; transform: scale(0.8); }
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #FFB6C1;
+            animation: confetti-fall 3s linear infinite;
+        }
+
+        @keyframes confetti-fall {
+            0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Stars -->
+    <div class="star">⭐</div>
+    <div class="star">✨</div>
+    <div class="star">⭐</div>
+    <div class="star">✨</div>
+    <div class="star">⭐</div>
+    <div class="star">✨</div>
+
+    <!-- Butterflies -->
+    <div class="butterfly">🦋</div>
+    <div class="butterfly">🦋</div>
+    <div class="butterfly">🦋</div>
+
+    <div class="card-container">
+        <div class="card-header">
+            <h1 class="birthday-title">🎉 Happy Birthday! 🎉</h1>
+            <h2 class="friend-name">Dear Risper</h2>
+        </div>
+
+        <div class="flower-decoration">
+            <div class="flower">🌸</div>
+            <div class="flower">🌺</div>
+            <div class="flower">🌷</div>
+        </div>
+
+        <div class="card-content">
+            <p class="birthday-message">
+                On your special day, I wanted to create something as beautiful and wonderful as you are!
+            </p>
+
+            <div class="wishes-list">
+                <div class="wish-item">May your day be filled with laughter and joy</div>
+                <div class="wish-item">May all your dreams come true this year</div>
+                <div class="wish-item">May you be surrounded by love and happiness</div>
+                <div class="wish-item">May life bring you endless adventures</div>
+                <div class="wish-item">May you shine as bright as the stars</div>
+            </div>
+
+            <p class="birthday-message">
+                You deserve all the beautiful things life has to offer!
+            </p>
+
+            <button class="sparkle-button" onclick="createConfetti()">
+                🎊 Make More Magic! 🎊
+            </button>
+        </div>
+
+        <div class="flower-decoration">
+            <div class="flower">🌹</div>
+            <div class="flower">🌻</div>
+            <div class="flower">🌼</div>
+        </div>
+
+        <div class="footer-message">
+            With all my love and best wishes! 💕
+        </div>
+    </div>
+
+    <script>
+        function createConfetti() {
+            const colors = ['#FFB6C1', '#FFC0CB', '#FF69B4', '#FFD700', '#FF1493'];
+            
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = Math.random() * 100 + '%';
+                    confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.animationDelay = Math.random() * 3 + 's';
+                    confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                    document.body.appendChild(confetti);
+                    
+                    setTimeout(() => confetti.remove(), 5000);
+                }, i * 50);
+            }
+        }
+
+        // Create initial confetti on load
+        window.addEventListener('load', () => {
+            setTimeout(createConfetti, 1000);
+        });
+
+        // Add floating hearts
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.innerHTML = '💕';
+            heart.style.position = 'absolute';
+            heart.style.fontSize = '1.5em';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.bottom = '-50px';
+            heart.style.animation = 'float-up 4s ease-out forwards';
+            heart.style.zIndex = '1';
+            document.body.appendChild(heart);
+            
+            setTimeout(() => heart.remove(), 4000);
+        }
+
+        // Add CSS for floating hearts
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes float-up {
+                0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+                100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Create hearts periodically
+        setInterval(createHeart, 3000);
+    </script>
+</body>
+</html>
