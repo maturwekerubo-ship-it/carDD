@@ -81,17 +81,81 @@
             margin: 20px 0;
         }
 
+        .cake-container {
+            text-align: center;
+            margin: 25px 0;
+            position: relative;
+        }
+
+        .cake {
+            font-size: 4em;
+            animation: bounce 2s ease-in-out infinite;
+            display: inline-block;
+        }
+
+        .age-number {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #FF1493;
+            font-family: 'Playfair Display', serif;
+            text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.5);
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        .girly-silhouettes {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .silhouette {
+            font-size: 2em;
+            animation: float 3s ease-in-out infinite;
+            margin: 5px;
+        }
+
+        .silhouette:nth-child(1) { animation-delay: 0.2s; }
+        .silhouette:nth-child(2) { animation-delay: 0.7s; }
+        .silhouette:nth-child(3) { animation-delay: 1.2s; }
+        .silhouette:nth-child(4) { animation-delay: 1.7s; }
+
+        .bg-silhouette {
+            position: absolute;
+            opacity: 0.3;
+            animation: float-slow 6s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        .bg-element {
+            position: absolute;
+            opacity: 0.4;
+            animation: twinkle 2s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.1); }
+        }
+
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(5deg); }
+        }
+
         .flower {
             font-size: 2em;
             animation: float 3s ease-in-out infinite;
-        }
-
-        .flower:nth-child(2) {
-            animation-delay: 0.5s;
-        }
-
-        .flower:nth-child(3) {
-            animation-delay: 1s;
         }
 
         .butterfly {
@@ -357,6 +421,22 @@
     <div class="star">⭐</div>
     <div class="star">✨</div>
 
+    <!-- Girly Silhouettes -->
+    <div class="bg-silhouette" style="top: 8%; left: 5%; font-size: 2em;">👗</div>
+    <div class="bg-silhouette" style="top: 15%; right: 8%; font-size: 1.8em;">👠</div>
+    <div class="bg-silhouette" style="bottom: 25%; left: 7%; font-size: 1.6em;">💄</div>
+    <div class="bg-silhouette" style="bottom: 18%; right: 6%; font-size: 2.2em;">👑</div>
+    <div class="bg-silhouette" style="top: 35%; left: 3%; font-size: 1.5em;">👜</div>
+    <div class="bg-silhouette" style="top: 60%; right: 4%; font-size: 1.7em;">💍</div>
+    <div class="bg-silhouette" style="top: 45%; left: 8%; font-size: 1.4em;">🎀</div>
+    <div class="bg-silhouette" style="bottom: 35%; left: 12%; font-size: 1.9em;">🧴</div>
+
+    <!-- Birthday Elements -->
+    <div class="bg-element" style="top: 25%; left: 15%; font-size: 1.6em;">🎈</div>
+    <div class="bg-element" style="top: 70%; right: 18%; font-size: 1.8em;">🎁</div>
+    <div class="bg-element" style="top: 50%; left: 20%; font-size: 1.4em;">🎉</div>
+    <div class="bg-element" style="bottom: 40%; right: 22%; font-size: 1.7em;">🎊</div>
+
     <!-- Butterflies -->
     <div class="butterfly">🦋</div>
     <div class="butterfly">🦋</div>
@@ -365,13 +445,18 @@
     <div class="card-container">
         <div class="card-header">
             <h1 class="birthday-title">🎉 Happy Birthday! 🎉</h1>
-            <h2 class="friend-name">Dear Risper</h2>
+            <h2 class="friend-name">My Dear Risper</h2>
         </div>
 
         <div class="flower-decoration">
             <div class="flower">🌸</div>
             <div class="flower">🌺</div>
             <div class="flower">🌷</div>
+        </div>
+
+        <div class="cake-container">
+            <div class="cake">🎂</div>
+            <div class="age-number">24</div>
         </div>
 
         <div class="card-content">
@@ -400,6 +485,13 @@
             <div class="flower">🌹</div>
             <div class="flower">🌻</div>
             <div class="flower">🌼</div>
+        </div>
+
+        <div class="girly-silhouettes">
+            <div class="silhouette">👗</div>
+            <div class="silhouette">👠</div>
+            <div class="silhouette">💄</div>
+            <div class="silhouette">👑</div>
         </div>
 
         <div class="footer-message">
