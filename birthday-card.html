@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #FFB6C1, #FFC0CB, #FFD700, #FF69B4);
+            background: linear-gradient(135deg, #FFB6C1, #FFC0CB, #90EE90, #FFD700, #FF69B4);
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -23,7 +23,7 @@
         }
 
         .card-container {
-            background: linear-gradient(145deg, #FFF0F5, #FFE4E1);
+            background: linear-gradient(145deg, #FFF0F5, #F0FFF0);
             border-radius: 20px;
             padding: 40px;
             box-shadow: 0 20px 60px rgba(255, 105, 180, 0.3);
@@ -32,6 +32,7 @@
             position: relative;
             z-index: 10;
             border: 3px solid #FFB6C1;
+            box-shadow: 0 20px 60px rgba(144, 238, 144, 0.2), 0 20px 60px rgba(255, 105, 180, 0.3);
         }
 
         .card-header {
@@ -41,7 +42,7 @@
 
         .birthday-title {
             font-size: 3em;
-            background: linear-gradient(45deg, #FF69B4, #FFB6C1, #FFD700);
+            background: linear-gradient(45deg, #FF69B4, #90EE90, #FFB6C1, #FFD700);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -129,9 +130,10 @@
             text-align: left;
             margin: 30px 0;
             padding: 20px;
-            background: rgba(255, 182, 193, 0.2);
+            background: rgba(144, 238, 144, 0.15);
+            border: 2px solid #90EE90;
             border-radius: 15px;
-            border: 2px solid #FFB6C1;
+            box-shadow: 0 5px 15px rgba(144, 238, 144, 0.2);
         }
 
         .wish-item {
@@ -154,7 +156,7 @@
         }
 
         .sparkle-button {
-            background: linear-gradient(45deg, #FF69B4, #FFB6C1);
+            background: linear-gradient(45deg, #FF69B4, #90EE90);
             color: white;
             border: none;
             padding: 15px 30px;
@@ -164,12 +166,12 @@
             margin: 20px auto;
             display: block;
             transition: transform 0.3s ease;
-            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+            box-shadow: 0 5px 15px rgba(144, 238, 144, 0.3), rgba(255, 105, 180, 0.3);
         }
 
         .sparkle-button:hover {
             transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.5);
+            box-shadow: 0 8px 25px rgba(144, 238, 144, 0.5), rgba(255, 105, 180, 0.5);
         }
 
         @keyframes sparkle {
@@ -270,7 +272,7 @@
 
     <script>
         function createConfetti() {
-            const colors = ['#FFB6C1', '#FFC0CB', '#FF69B4', '#FFD700', '#FF1493'];
+            const colors = ['#FFB6C1', '#FFC0CB', '#FF69B4', '#90EE90', '#32CD32', '#FFD700', '#FF1493'];
             
             for (let i = 0; i < 50; i++) {
                 setTimeout(() => {
