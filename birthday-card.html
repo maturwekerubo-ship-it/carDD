@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday Risper! 🦋</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,14 +13,16 @@
         }
 
         body {
-            font-family: 'Georgia', serif;
+            font-family: 'Montserrat', sans-serif;
             background: linear-gradient(135deg, #FFB6C1, #FFC0CB, #90EE90, #FFD700, #FF69B4);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: auto;
             position: relative;
+            padding: 20px;
         }
 
         .card-container {
@@ -28,7 +31,7 @@
             padding: 40px;
             box-shadow: 0 20px 60px rgba(255, 105, 180, 0.3);
             max-width: 600px;
-            width: 90%;
+            width: 100%;
             position: relative;
             z-index: 10;
             border: 3px solid #FFB6C1;
@@ -41,6 +44,7 @@
         }
 
         .birthday-title {
+            font-family: 'Playfair Display', serif;
             font-size: 3em;
             background: linear-gradient(45deg, #FF69B4, #90EE90, #FFB6C1, #FFD700);
             -webkit-background-clip: text;
@@ -51,6 +55,7 @@
         }
 
         .friend-name {
+            font-family: 'Playfair Display', serif;
             font-size: 2.5em;
             color: #FF1493;
             margin: 20px 0;
@@ -208,6 +213,138 @@
         @keyframes confetti-fall {
             0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
             100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            .card-container {
+                padding: 30px 20px;
+                margin: 10px;
+            }
+            
+            .birthday-title {
+                font-size: 2.2em;
+            }
+            
+            .friend-name {
+                font-size: 1.8em;
+            }
+            
+            .birthday-message {
+                font-size: 1.1em;
+            }
+            
+            .wish-item {
+                font-size: 1em;
+            }
+            
+            .flower {
+                font-size: 1.5em;
+            }
+            
+            .sparkle-button {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+            
+            .footer-message {
+                font-size: 1.1em;
+            }
+            
+            .butterfly {
+                font-size: 1.2em;
+            }
+            
+            .star {
+                font-size: 0.8em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            
+            .card-container {
+                padding: 25px 15px;
+                border-radius: 15px;
+            }
+            
+            .birthday-title {
+                font-size: 1.8em;
+                line-height: 1.2;
+            }
+            
+            .friend-name {
+                font-size: 1.5em;
+            }
+            
+            .birthday-message {
+                font-size: 1em;
+                line-height: 1.5;
+            }
+            
+            .wishes-list {
+                padding: 15px;
+                margin: 20px 0;
+            }
+            
+            .wish-item {
+                font-size: 0.95em;
+                margin: 8px 0;
+            }
+            
+            .flower {
+                font-size: 1.2em;
+            }
+            
+            .sparkle-button {
+                padding: 10px 20px;
+                font-size: 0.95em;
+                margin: 15px auto;
+            }
+            
+            .footer-message {
+                font-size: 1em;
+            }
+            
+            .butterfly {
+                font-size: 1em;
+            }
+            
+            .star {
+                font-size: 0.7em;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .card-container {
+                padding: 20px 10px;
+            }
+            
+            .birthday-title {
+                font-size: 1.5em;
+            }
+            
+            .friend-name {
+                font-size: 1.3em;
+            }
+            
+            .birthday-message {
+                font-size: 0.9em;
+            }
+            
+            .wish-item {
+                font-size: 0.9em;
+            }
+            
+            .flower {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
